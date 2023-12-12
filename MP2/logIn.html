@@ -35,8 +35,29 @@
         <div class="parent" id="parent1">
             <div class="child" id="child1">
 
-                <h3>BlotterHub</h3>
+                <h1 style="font-weight: 500; letter-spacing: 3px; font-size: 50px;">BlotterHub</h1>
+                
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="email">
+                </div>
 
+                <div class="response">
+                    <p id="userRespo"></p>
+                </div>
+                
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="password" style="border-style: none;">
+                    <i class="bi bi-eye-slash-fill" id="icon" onmo onmousedown="reveal()" onmouseup="unreveal()"></i>
+                </div>
+
+                <div class="response">
+                    <p id="passRespo"></p>
+                </div>
+                
+                <input type="button" value="LOG IN" id="login" onclick="access()">
+
+                <p style="font-size: 17px; text-align: center;">Dont have an account? <a href="">Sign Up</a></p>
 
             </div>
         </div>
