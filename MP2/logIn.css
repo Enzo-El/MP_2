@@ -1,0 +1,67 @@
+*{
+    font-family: Poppins;
+    letter-spacing: 1px;
+}
+
+.container-fluid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fR;
+    grid-template-areas: "parent1 parent2";
+}
+
+#parent1{
+    grid-area: parent1;
+    padding: 150px;
+}
+
+#parent2{
+    grid-area: parent2;
+    background-image: url(/Images/brgy.png);
+    background-position: center;
+    background-size: cover;
+
+    padding: 100px;
+}
+
+#child1{
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    height: 100%;
+    background-color: #bdcf18;
+
+}
+
+
+#login{
+    width: 100%;
+    background-color: #def12cd7;
+    color: #254558 ;
+    border-style: none;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}#login:hover{
+    background-color: #dbeb4a;
+}
+
+
+#child2{
+    height: 100%;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
