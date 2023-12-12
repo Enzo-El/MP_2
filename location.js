@@ -1,6 +1,6 @@
 
 function loginPage(){
-    window.location.href = 'login.html';
+    window.location.href = 'logIn.html';
 }
 
 function signupPage(){
