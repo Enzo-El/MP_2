@@ -39,5 +39,4 @@ function submitAdminForm(){
     // This is the Checkbox for TermsAndCondition/PrivacyPolicy
     // Value of the Checkbox is: "accepted"
     var checkBox = document.getElementById('agree').value;
-
 }
