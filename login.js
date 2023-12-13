@@ -1,6 +1,3 @@
-let username = ['admin', 'admin2', 'kirukushikun'];
-let password = ['admin', 'admin2', 'executioner031'];
-
 let userRes = document.getElementById('userRespo');
 let passRes = document.getElementById('passRespo');
 
@@ -66,17 +63,3 @@ function unreveal(){
     icon.classList.add('bi-eye-slash-fill');
 }
 // -------------------------------------------
-
-        // if(accInput !== userAcc && passInput !== userPass){
-        //     userRes.innerText = 'Username incorrect';
-        //     passRes.innerText = 'Password incorrect';
-        // }else if(accInput !== userAcc){
-        //     userRes.innerText = 'Username incorrect';
-        // }else if(passInput !== userPass){
-        //     passRes.innerText = 'Password incorrect';
-        // }else{
-
-        //     //Insert the Landing page of Admin/User here
-        //     window.location.href =  "index.html";
-
-        // }       

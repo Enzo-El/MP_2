@@ -1,3 +1,5 @@
+
+
 function submitUserForm(){
     var firstname = document.getElementById('fName').value;
     var lastname = document.getElementById('lName').value;
@@ -40,3 +42,23 @@ function submitAdminForm(){
     // Value of the Checkbox is: "accepted"
     var checkBox = document.getElementById('agree').value;
 }
+
+    username = ['admin', 'Iverson'];
+    password = ['admin', 'craig'];
+
+    // function testing(){
+
+    //     var usernameInput = document.getElementById('username');
+    //     var passwordinput = document.getElementById('password');
+
+    //     localStorage.setItem('username', usernameInput.value);
+    //     localStorage.setItem('password', passwordinput.value);
+
+    //     var retrievedUser = localStorage.getItem('username');
+    //     var retrievedPass = localStorage.getItem('password');
+
+    //     usernamee.push(retrievedUser);
+    //     passwordd.push(retrievedPass);
+
+    //     alert("Success");
+    // }
