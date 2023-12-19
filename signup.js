@@ -81,12 +81,15 @@ function accountSignUp() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("pWord").value;
   var confirm = document.getElementById("cPword").value;
+  var type = document.getElementById("submit").value;
 
   var storedUser = localStorage.getItem("username");
   var storedPass = localStorage.getItem("password");
+  var storedType = localStorage.getItem("usertype");
 
   var existingUser = JSON.parse(storedUser) || [];
   var existingPass = JSON.parse(storedPass) || [];
+  var existingType = JSON.parse(storedType) || [];
 
   var charactersUser = username.length;
   var charactersPass = confirm.length;
@@ -95,12 +98,16 @@ function accountSignUp() {
     alert("Please enter 8 character username");
   } else if (charactersPass < 8) {
     alert("Please enter 8 character password");
+  } else if (password !== confirm) {
+    alert("Password not matched");
   } else {
     existingUser.push(username);
     existingPass.push(confirm);
+    existingType.push(type);
 
     localStorage.setItem("username", JSON.stringify(existingUser));
     localStorage.setItem("password", JSON.stringify(existingPass));
+    localStorage.setItem("usertype", JSON.stringify(existingType));
 
     alert("Signed Up successfully");
     location.reload();
