@@ -1,8 +1,10 @@
 var storedUser = localStorage.getItem("username");
 var storedPass = localStorage.getItem("password");
+var storedUserType = localStorage.getItem("usertype");
 
 var username = JSON.parse(storedUser);
 var password = JSON.parse(storedPass);
+var usertype = JSON.parse(storedUserType);
 
 let userRes = document.getElementById("userRespo");
 let passRes = document.getElementById("passRespo");
@@ -14,8 +16,10 @@ async function scanUser() {
   for (let i = 0; i < username.length; i++) {
     num1 = username[i];
     num2 = password[i];
+    num3 = usertype[i];
+
     if (num1 === accInput || num2 === passInput) {
-      verify(num1, num2);
+      verify(num1, num2, num3);
       break;
     } else {
       userRes.innerText = "Username incorrect";
@@ -24,7 +28,7 @@ async function scanUser() {
   }
 }
 
-function verify(USERNAME, PASSWORD) {
+function verify(USERNAME, PASSWORD, USERTYPE) {
   let accInput = document.getElementById("email").value;
   let passInput = document.getElementById("password").value;
 
@@ -32,7 +36,11 @@ function verify(USERNAME, PASSWORD) {
   passRes.innerText = "";
 
   if (USERNAME === accInput && PASSWORD === passInput) {
-    window.location.href = "index.html";
+    if (USERTYPE == "admin") {
+      window.location.href = "adminPage.html";
+    } else {
+      window.location.href = "userPage.html";
+    }
   } else if (USERNAME === accInput && PASSWORD !== passInput) {
     passRes.innerText = "Password incorrect";
   } else if (USERNAME !== accInput && PASSWORD === passInput) {
