@@ -33,7 +33,7 @@
 
 #parent2 {
   grid-area: parent2;
-  background-image: url("/Images/brgy.png");
+  background-image: url("./Images/brgy.png");
   background-position: center;
   background-size: cover;
 
