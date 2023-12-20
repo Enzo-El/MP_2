@@ -9,18 +9,26 @@
 
 // SIDEBAR TOGGLE
 let sidebarOpen = false;
-const sidebar = document.getElementById('sidebar');
+const sidebar = document.getElementById("sidebar");
+
+var userName = localStorage.getItem("name");
+document.getElementById("UsersName").textContent =
+  capitalizeFirstLetter(userName) + "!";
 
 function openSidebar() {
   if (!sidebarOpen) {
-    sidebar.classList.add('sidebar-responsive');
+    sidebar.classList.add("sidebar-responsive");
     sidebarOpen = true;
   }
 }
 
 function closeSidebar() {
   if (sidebarOpen) {
-    sidebar.classList.remove('sidebar-responsive');
+    sidebar.classList.remove("sidebar-responsive");
     sidebarOpen = false;
   }
+}
+
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
