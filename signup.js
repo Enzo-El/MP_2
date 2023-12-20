@@ -47,7 +47,7 @@ function validateInputs() {
   });
 
   if (isValid) {
-    if (parsedContact > 0 && lengthContact < 12) {
+    if (parsedContact > 0 && lengthContact === 11) {
       accountSignUp();
     } else {
       alert("contact number invalid");

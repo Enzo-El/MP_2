@@ -25,8 +25,7 @@ async function scanUser() {
       verify(num1, num2, num3, num4);
       break;
     } else {
-      userRes.innerText = "Username incorrect";
-      passRes.innerText = "Password incorrect";
+      passRes.innerText = "Account doesn't exist";
     }
   }
 }
