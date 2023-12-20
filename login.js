@@ -1,10 +1,12 @@
 var storedUser = localStorage.getItem("username");
 var storedPass = localStorage.getItem("password");
 var storedUserType = localStorage.getItem("usertype");
+var storedFname = localStorage.getItem("firstname");
 
 var username = JSON.parse(storedUser);
 var password = JSON.parse(storedPass);
 var usertype = JSON.parse(storedUserType);
+var firstname = JSON.parse(storedFname);
 
 let userRes = document.getElementById("userRespo");
 let passRes = document.getElementById("passRespo");
@@ -17,9 +19,10 @@ async function scanUser() {
     num1 = username[i];
     num2 = password[i];
     num3 = usertype[i];
+    num4 = firstname[i];
 
     if (num1 === accInput || num2 === passInput) {
-      verify(num1, num2, num3);
+      verify(num1, num2, num3, num4);
       break;
     } else {
       userRes.innerText = "Username incorrect";
@@ -28,7 +31,7 @@ async function scanUser() {
   }
 }
 
-function verify(USERNAME, PASSWORD, USERTYPE) {
+function verify(USERNAME, PASSWORD, USERTYPE, NAME) {
   let accInput = document.getElementById("email").value;
   let passInput = document.getElementById("password").value;
 
@@ -38,8 +41,10 @@ function verify(USERNAME, PASSWORD, USERTYPE) {
   if (USERNAME === accInput && PASSWORD === passInput) {
     if (USERTYPE == "admin") {
       window.location.href = "adminPage.html";
+      localStorage.setItem("name", NAME);
     } else {
       window.location.href = "userPage.html";
+      localStorage.setItem("name", NAME);
     }
   } else if (USERNAME === accInput && PASSWORD !== passInput) {
     passRes.innerText = "Password incorrect";
