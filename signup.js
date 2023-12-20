@@ -101,8 +101,5 @@ function accountSignUp() {
 
     alert("Signed Up successfully");
     location.reload();
-
-    console.log(existingUser);
-    console.log(existingPass);
   }
 }
