@@ -3,6 +3,21 @@
   letter-spacing: 1px;
 }
 
+#backBtn {
+  position: absolute;
+  display: flex;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+  color: rgba(0, 0, 0, 0.548);
+}
+#backBtn:hover {
+  padding-left: 20px;
+  color: black;
+}
+
 .container-fluid {
   height: 100%;
   width: 100%;
