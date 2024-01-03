@@ -155,11 +155,11 @@
 
 	            <p>Please fill out this form with the required information</p>
 
-	            <form method="" action=''>
+	            <form id="userForm" method="" action=''>
 
 		            <fieldset>
-			            <label for="complete-name">Enter Your Complete Name: 
-                            <input id="complete-name" name="complete-name" type="text" required placeholder="ex. first name, middle name, last name" />
+			            <label for="completeName">Enter Your Complete Name: 
+                            <input id="completeName" name="completeName" type="text" required placeholder="ex. first name, middle name, last name" />
                         </label>
 			                
                         <label for="residence">Enter Your Residence Address: 
@@ -179,10 +179,10 @@
                         <label for="blotter">What is the type of violence?
                             <select id="blotter" name="blotter">
                                 <option value="">(select one)</option>
-                                <option value="1">Violence Against Women and Children</option>
-                                <option value="2">Domestic Violence</option>
-                                <option value="3">Physical Harassment</option>
-                                <option value="4">Unjust Vexation</option>
+                                <option value="Violence Against Women and Children">Violence Against Women and Children</option>
+                                <option value="Domestic Violence">Domestic Violence</option>
+                                <option value="Physical Harassment">Physical Harassment</option>
+                                <option value="Unjust Vexation">Unjust Vexation</option>
                             </select>
                         </label>
 
@@ -190,12 +190,12 @@
 				            <textarea id="narrative" name="narrative" rows="6" cols="60" placeholder="This is what happened..."></textarea>
 			            </label>
 
-                        <label for="incident-date">Incident Date:
-                            <input id="incident-date" type="date" name="incident-date" required /></label>
+                        <label for="incidentDate">Incident Date:
+                            <input id="incidentDate" type="date" name="incidentDate" required /></label>
 		                </label>
 
-                        <label for="incident-picture">Upload a Photo of Incident as proof: 
-                            <input id="incident-picture" type="file" name="incident-picture" />
+                        <label for="incidentPicture">Upload a Photo of Incident as proof: 
+                            <input id="incidentPicture" type="file" name="incidentPicture" />
                         </label>
 		            </fieldset>
 
@@ -214,7 +214,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
 
             <!--- Custom JS --->
-            <script src="userScript.js"></script>
+            <script src="Report.js"></script>
         </div>
     </body>
 </html>
