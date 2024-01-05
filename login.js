@@ -48,7 +48,7 @@ function verify(USERNAME, PASSWORD, USERTYPE, NAME) {
   } else if (USERNAME === accInput && PASSWORD !== passInput) {
     passRes.innerText = "Password incorrect";
   } else if (USERNAME !== accInput) {
-    userRes.innerText = "Account doesn't exist";
+    passRes.innerText = "Account doesn't exist";
   }
 }
 
