@@ -61,6 +61,21 @@ body {
 }
 /*--- End of "Header" Styling ---*/
 
+/*--- "Table" Styling ---*/
+th{
+  border-style: solid;
+  border-width: 2px;
+  padding: 2px 7px;
+}
+td {
+  border-style: solid;
+  border-width: 0 0px 1px 0px;
+  text-align: center;
+  padding: 12px 7px;
+  
+}
+/*--- End of "Table" Styling ---*/
+
 /*--- "Sidebar" Styling ---*/
 #sidebar {
   grid-area: sidebar;
