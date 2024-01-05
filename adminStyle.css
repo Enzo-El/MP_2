@@ -60,6 +60,28 @@ body {
 }
 /*--- End of "Header" Styling ---*/
 
+/*--- "Table" Styling ---*/
+th{
+  border-style: solid;
+  border-width: 2px;
+  padding: 0px 7px 0px 7px;
+}
+td {
+  border-style: solid;
+  border-width: 0 0px 1px 0px;
+  text-align: center;
+  padding: 7px;
+  
+}
+select{
+  border-radius: 5px;
+  background-color: #2f415f;
+  color: white;
+  border-style: none;
+  padding: 5px;
+}
+/*--- End of "Table" Styling ---*/
+
 /*--- "Sidebar" Styling ---*/
 #sidebar {
   grid-area: sidebar;

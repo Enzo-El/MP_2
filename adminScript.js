@@ -30,8 +30,37 @@ function updateAdminTable() {
     const key = localStorage.key(i);
     const userData = JSON.parse(localStorage.getItem(key));
 
-    const row = document.createElement('tr');
+    if(i === 0){
+      const newkey = i + 1;
+      const key = 'Case No. ' + newkey;
+      const userData = JSON.parse(localStorage.getItem(key))
+      const row = document.createElement('tr');
       row.innerHTML = `
+      <td>${userData.caseNo}</td>
+      <td>${userData.completeName}</td>
+      <td>${userData.residence}</td>
+      <td>${userData.email}</td>
+      <td>${userData.phone}</td>
+      <td>${userData.blotter}</td>
+      <td>${userData.narrative}</td>
+      <td>${userData.incidentDate}</td>
+      <td>${userData.incidentPicture}</td>
+       <td>
+       <select onchange="updateStatus(this.value, '${userData.caseNo}')">
+      <option value="Pending" ${userData.status === 'Pending' ? 'selected' : ''}>Pending</option>
+      <option value="For Verification" ${userData.status === 'For Verification' ? 'selected' : ''}>For Verification</option>
+      <option value="Under Investigation" ${userData.status === 'Under Investigation' ? 'selected' : ''}>Under Investigation</option>
+      <option value="For Mediation" ${userData.status === 'For Mediation' ? 'selected' : ''}>For Mediation</option>
+      <option value="Resolved" ${userData.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
+       </select>
+       </td>
+       `;
+         adminTableBody.appendChild(row);
+       }else if(i > 1){
+        const key = 'Case No. ' + i;
+        const userData = JSON.parse(localStorage.getItem(key))
+        const row = document.createElement('tr');
+        row.innerHTML = `
         <td>${userData.caseNo}</td>
         <td>${userData.completeName}</td>
         <td>${userData.residence}</td>
@@ -41,17 +70,18 @@ function updateAdminTable() {
         <td>${userData.narrative}</td>
         <td>${userData.incidentDate}</td>
         <td>${userData.incidentPicture}</td>
-        <td>
-          <select onchange="updateStatus(this.value, '${userData.caseNo}')">
-            <option value="Pending" ${userData.status === 'Pending' ? 'selected' : ''}>Pending</option>
-            <option value="For Verification" ${userData.status === 'For Verification' ? 'selected' : ''}>For Verification</option>
-            <option value="Under Investigation" ${userData.status === 'Under Investigation' ? 'selected' : ''}>Under Investigation</option>
-            <option value="For Mediation" ${userData.status === 'For Mediation' ? 'selected' : ''}>For Mediation</option>
-            <option value="Resolved" ${userData.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
-          </select>
-        </td>
-      `;
-      adminTableBody.appendChild(row);
+         <td>
+         <select onchange="updateStatus(this.value, '${userData.caseNo}')">
+        <option value="Pending" ${userData.status === 'Pending' ? 'selected' : ''}>Pending</option>
+        <option value="For Verification" ${userData.status === 'For Verification' ? 'selected' : ''}>For Verification</option>
+        <option value="Under Investigation" ${userData.status === 'Under Investigation' ? 'selected' : ''}>Under Investigation</option>
+        <option value="For Mediation" ${userData.status === 'For Mediation' ? 'selected' : ''}>For Mediation</option>
+        <option value="Resolved" ${userData.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
+         </select>
+         </td>
+         `;
+           adminTableBody.appendChild(row);
+       }
   }
 }
 

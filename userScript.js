@@ -38,11 +38,12 @@ function updateIndexTable() {
   indexTableBody.innerHTML = '';
 
   for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    const userData = JSON.parse(localStorage.getItem(key));
-    
-    const row = document.createElement('tr');
-    row.innerHTML = `
+    if(i === 0){
+      const newkey = i + 1;
+      const key = 'Case No. ' + newkey;
+      const userData = JSON.parse(localStorage.getItem(key))
+      const row = document.createElement('tr');
+      row.innerHTML = `
       <td>${userData.caseNo}</td>
       <td>${userData.completeName}</td>
       <td>${userData.residence}</td>
@@ -55,6 +56,24 @@ function updateIndexTable() {
       <td>${userData.status}</td>
     `;
     indexTableBody.appendChild(row);
+    }else if (i > 1){
+      const key = 'Case No. ' + i;
+      const userData = JSON.parse(localStorage.getItem(key));
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${userData.caseNo}</td>
+        <td>${userData.completeName}</td>
+        <td>${userData.residence}</td>
+        <td>${userData.email}</td>
+        <td>${userData.phone}</td>
+        <td>${userData.blotter}</td>
+        <td>${userData.narrative}</td>
+        <td>${userData.incidentDate}</td>
+        <td>${userData.incidentPicture}</td>
+        <td>${userData.status}</td>
+      `;
+      indexTableBody.appendChild(row);      
+    }  
   }
 }
 
