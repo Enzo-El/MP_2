@@ -46,16 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const blotter = document.getElementById('blotter').value;
     const narrative = document.getElementById('narrative').value;
     const incidentDate = document.getElementById('incidentDate').value;
-    const incidentPicture = document.getElementById('incidentPicture');
+    // const incidentPicture = document.getElementById('incidentPicture');
 
-    if (incidentPicture.files.length > 0) {
-      const photo = URL.createObjectURL(incidentPicture.files[0]);
-    } else {
-      alert("Please upload a photo before submitting.");
-    }
+    // if (incidentPicture.files.length > 0) {
+    //   const photo = URL.createObjectURL(incidentPicture.files[0]);
+    // } else {
+    //   alert("Please upload a photo before submitting.");
+    // }
 
     // Update local storage
-    const userData = { caseNo, completeName, residence, email, phone, blotter, narrative, incidentDate, incidentPicture, status: 'Pending' };
+    const userData = { caseNo, completeName, residence, email, phone, blotter, narrative, incidentDate, status: 'Pending' };
     localStorage.setItem(caseNo, JSON.stringify(userData));
 
     // Update index.html table
@@ -104,7 +104,6 @@ function updateIndexTable() {
         <td>${userData.blotter}</td>
         <td>${userData.narrative}</td>
         <td>${userData.incidentDate}</td>
-        <td>${userData.incidentPicture}</td>
         <td>${userData.status}</td>
       `;
       indexTableBody.appendChild(row);
@@ -129,7 +128,6 @@ function updateAdminTable() {
         <td>${userData.blotter}</td>
         <td>${userData.narrative}</td>
         <td>${userData.incidentDate}</td>
-        <td>${userData.incidentPicture}</td>
         <td>
           <select onchange="updateStatus(this.value, '${userData.caseNo}')">
             <option value="Pending" ${userData.status === 'Pending' ? 'selected' : ''}>Pending</option>
