@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <!--- Student Name: Iverson Craig Gonzales Guno --->
+  <!--- Student Name: Roy Icaranom Manaog --->
+  <!--- Student Name: Lorenzo Laurel Reyes --->
+  <!--- Class Batch: WD92P (ZetoRo) --->
+  <!--- MP2 Group No.: Group 3 KonohaGakure --->
+  <!--- Schedule: 7:00pm to 10:00pm --->
+  <!--- Instructor: Ma'am Jamie Delina --->
+  <!--- Coordinator: Sir Ben De Leon --->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Admin Blotter Page</title>
+
+    <!--- Montserrat Font --->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--- Material Icons --->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap 5 icons CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!--- Custom CSS --->
+    <link rel="stylesheet" href="adminStyle.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!--- Header --->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+        <div class="header-right">
+          <i class="bi bi-person-circle"></i>
+          <div>Hi <span id="UsersName">Admin</span></div>
+        </div>
+      </header>
+      <!--- End Header --->
+
+      <!--- Sidebar --->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="adminPage.html"><span class="material-icons-outlined"></span> Online Blotter</a>
+          </div>
+
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="definitionAdmin.html">
+              <span class="material-icons-outlined">pending</span> Definition of Terms
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="actionAdmin.html">
+              <span class="material-icons-outlined">verified</span> Action Taken
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="investigationAdmin.html">
+              <span class="material-icons-outlined">not_listed_location</span> Under Investigation
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">diversity_3</span> Proper Proceedings
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="dataPrivacyAdmin.html">
+              <span class="material-icons-outlined">check_box</span> Data Delivery Privacy
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="termsAdmin.html">
+              <span class="material-icons-outlined">view_list</span> Terms and Conditions
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="logIn.html">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!--- End Sidebar --->
+
+      <!--- Main --->
+      <main class="main-container">
+
+        <div class="main-title">
+            <h2>PROPER PROCEEDINGS</h2>
+        </div>
+
+        <div class="main-cards">
+          <!--- PROPER PROCEEDINGS --->
+          <div class="card">
+            <div class="card-inner">
+              <h3><u>HERE IS THE PROPER PROCEEDINGS</u>:</h3>
+              <span class="material-icons-outlined">diversity_3</span>
+            </div>
+
+            <ol>
+              <li>The Barangay Local Government Unit must take note that the time of initial action response must be at least from 5-10 minutes upon receiving the blotter or complaints.</li>
+              <br />
+              <li>The Barangay Local Government Unit must be neutral at any circumstances and must always give "<b><i>the benifit of a doubt</i></b>" to the person filing the blotter and the person of interest under any circumstances disregarding any discriminatory instances.</li>
+              <br />
+              <li>All reports and evidence submitted, gathered and collected within the crime scence/incident area must be maintained and kept on a safe place untampered and readily available for submission to authority upon call to action.</li>
+              <br />
+              <li>All the invesgation logs and findings must be "<b><i>transparently</i></b>" reported to all of the concerned parties, the <b><u>authorities</u></b>, <b><u>complainant(s)</u></b> and <b><u>respondent(s)</u></b>.</li>
+              <br />
+              <li>Moreover, the Barangay Local Government Unit must not have any "<b><i>biases</i></b>" during the hearing and resolution of the case. This will maintain the highest level of integrity and conduct of public service.</li>
+              <br />
+              <li>The Barangay Local Government Unit must always cooperate with the authority regarding any submission of data sheets and evidence collected along the initial investigation, unless otherwise the data being asked is outside the scope of the reported and not related to the blotter being reported.</li>
+              <br />
+              <li>The Barangay Local Government Unit must always ensure the completeness and accuracy of reports submitted to the higher courts at all times and by all appropriate means necessary with urgency and complacency.</li>
+            </ol>
+          </div>
+          <!--- End of PROPER PROCEEDINGS --->
+        </div>
+
+        <br />
+
+      </main>
+      <!--- End Main --->
+    </div>
+
+    <!--- Scripts --->
+    <!--- ApexCharts --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+
+    <!--- Custom JS --->
+    <script src="adminScript.js"></script>
+  </body>
+</html>

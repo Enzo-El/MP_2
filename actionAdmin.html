@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <!--- Student Name: Iverson Craig Gonzales Guno --->
+  <!--- Student Name: Roy Icaranom Manaog --->
+  <!--- Student Name: Lorenzo Laurel Reyes --->
+  <!--- Class Batch: WD92P (ZetoRo) --->
+  <!--- MP2 Group No.: Group 3 KonohaGakure --->
+  <!--- Schedule: 7:00pm to 10:00pm --->
+  <!--- Instructor: Ma'am Jamie Delina --->
+  <!--- Coordinator: Sir Ben De Leon --->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Admin Blotter Page</title>
+
+    <!--- Montserrat Font --->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--- Material Icons --->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap 5 icons CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!--- Custom CSS --->
+    <link rel="stylesheet" href="adminStyle.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!--- Header --->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+        <div class="header-right">
+          <i class="bi bi-person-circle"></i>
+          <div>Hi <span id="UsersName">Admin</span></div>
+        </div>
+      </header>
+      <!--- End Header --->
+
+      <!--- Sidebar --->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="adminPage.html"><span class="material-icons-outlined"></span> Online Blotter</a>
+          </div>
+
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="definitionAdmin.html">
+              <span class="material-icons-outlined">pending</span> Definition of Terms
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">verified</span> Action Taken
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="investigationAdmin.html">
+              <span class="material-icons-outlined">not_listed_location</span> Under Investigation
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="proceedingsAdmin.html">
+              <span class="material-icons-outlined">diversity_3</span> Proper Proceedings
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="dataPrivacyAdmin.html">
+              <span class="material-icons-outlined">check_box</span> Data Delivery Privacy
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="termsAdmin.html">
+              <span class="material-icons-outlined">view_list</span> Terms and Conditions
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="logIn.html">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!--- End Sidebar --->
+
+      <!--- Main --->
+      <main class="main-container">
+
+        <div class="main-title">
+            <h2>ACTION TAKEN</h2>
+        </div>
+
+        <div class="main-cards">
+          <!--- ACTION TAKEN --->
+          <div class="card">
+            <div class="card-inner">
+              <h3><u>PLEASE BE GUIDED ACCORDINGLY</u>:</h3>
+              <span class="material-icons-outlined">verified</span>
+            </div>
+
+            <p>Please take note that you should only choose the appropriate option based on the actual action taken related to the incident reported.</p>
+
+            <ol>
+              <li><b><u>Pending</u></b> - this is the "<b><i>default</i></b>" status of the all the reports/blotters submitted first hand. This status appears on both the user's page and the admin's page. You may opt not to change this status unless otherwise you have taken an action, either physical or virtual to initially handle the complaint.</li>
+              <br />
+              <li><b><u>For Verification</u></b> - this is "<b><i>first stage</i></b>" of action the admin must take with the help of an officer or verification team. This is the actual verification of the reported details in relation to the complaint. It is crucial to note the email address and the contact number of the complainant for proper coordination and communication.</li>
+              <br />
+              <li><b><u>Under Investigation</u></b> - this is "<b><i>second stage</i></b>" of action the admin must take in order to identify the root cause and the impact of the reported blotter/complaint. This is the data/evidence gathering stage, it is important to closely coordinate with the complainant the data needed (such as sensitive photo, videos, cctv and audio recordings) that will help in solving the case.</li>
+              <br />
+              <li><b><u>For Mediation</u></b> - this is "<b><i>third stage</i></b>" of action the admin must take in order to try to resolve the reported incident by a closed-door meeting and conversation of the complainant (affected person) and the respondent (perpetuator) with the help of a "<b><i>Mediating Officer</i></b>"</li>
+              <br />
+              <li><b><u>Resolved</u></b> - this is the "<b><i>final act</i></b>" once the blotter/incident report has been duly solved (at the Barangay-Level) or escalated to higher courts for trial and jury's verdict.</li>
+              <br />
+            </ol>
+          </div>
+          <!--- End of ACTION TAKEN --->
+        </div>
+
+        <br />
+
+      </main>
+      <!--- End Main --->
+    </div>
+
+    <!--- Scripts --->
+    <!--- ApexCharts --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+
+    <!--- Custom JS --->
+    <script src="adminScript.js"></script>
+  </body>
+</html>

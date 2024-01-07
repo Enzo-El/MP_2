@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <!--- Student Name: Iverson Craig Gonzales Guno --->
+  <!--- Student Name: Roy Icaranom Manaog --->
+  <!--- Student Name: Lorenzo Laurel Reyes --->
+  <!--- Class Batch: WD92P (ZetoRo) --->
+  <!--- MP2 Group No.: Group 3 KonohaGakure --->
+  <!--- Schedule: 7:00pm to 10:00pm --->
+  <!--- Instructor: Ma'am Jamie Delina --->
+  <!--- Coordinator: Sir Ben De Leon --->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Admin Blotter Page</title>
+
+    <!--- Montserrat Font --->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--- Material Icons --->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap 5 icons CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!--- Custom CSS --->
+    <link rel="stylesheet" href="adminStyle.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!--- Header --->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+        <div class="header-right">
+          <i class="bi bi-person-circle"></i>
+          <div>Hi <span id="UsersName">Admin</span></div>
+        </div>
+      </header>
+      <!--- End Header --->
+
+      <!--- Sidebar --->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="adminPage.html"><span class="material-icons-outlined"></span> Online Blotter</a>
+          </div>
+
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="definitionAdmin.html">
+              <span class="material-icons-outlined">pending</span> Definition of Terms
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="actionAdmin.html">
+              <span class="material-icons-outlined">verified</span> Action Taken
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="#">
+              <span class="material-icons-outlined">not_listed_location</span> Under Investigation
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="proceedingsAdmin.html">
+              <span class="material-icons-outlined">diversity_3</span> Proper Proceedings
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="dataPrivacyAdmin.html">
+              <span class="material-icons-outlined">check_box</span> Data Delivery Privacy
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="termsAdmin.html">
+              <span class="material-icons-outlined">view_list</span> Terms and Conditions
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="logIn.html">
+              <span class="material-icons-outlined">logout</span> Logout
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!--- End Sidebar --->
+
+      <!--- Main --->
+      <main class="main-container">
+
+        <div class="main-title">
+            <h2>UNDER INVESTIGATION</h2>
+        </div>
+
+        <div class="main-cards">
+            <!--- UNDER INVESTIGATION --->
+            <div class="card">
+              <div class="card-inner">
+                <h3><u>PLEASE FOLLOW THE RESPECTIVE GUIDELINES BELOW</u>:</h3>
+                <span class="material-icons-outlined">not_listed_location</span>
+              </div>
+  
+              <p>Every single crime scene is different. Some crime scenes are outside, while others are inside. Some crimes occur in homes, while others occur in public places, and some even occur virtually. While special consideration must be taken for the specifics of the scene, there are some basic steps that law enforcement and investigators follow each time. These are known as the "<b>7 S's of Investigation</b>".</p>
+  
+              <ol>
+                <li><b><u>Secure the Scene</u></b> - The first officer to arrive at the scene should <b><i>secure the scene</i></b> by making sure that everyone in the area is safe and isolate the area to preserve evidence. This may include arresting suspects and obtaining medical assistance. A "<b><i>crime scene tape</i></b>" is often used to help secure the scene.</li>
+                <br />
+                <li><b><u>Separate the Witnesses</u></b> - Witnesses should be separated from one another. What is the purpose of this separation? <b><i>To keep them from working together to create a cover story and/or share details about the situation with one another</i></b>.</li>
+                <br />
+                <li><b><u>Scan the Scene</u></b> - This step gives investigators an overall picture of the scene. They will identify the primary crime scene, or where the crime took place. If applicable, they'll identify area(s) related to the crime but not where the crime took place, or the <b><i>secondary crime scene</i></b>.</li>
+                <br />
+                <li><b><u>See the Scene</u></b> - A photography unit will take pictures of items identified during the initial scan. Pictures should be taken of the overall area (in addition to the ones submitted by the complainant), as well as close-ups, using <b><i>evidence markers</i></b> or a <b><i>ruler</i></b> for size reference.</li>
+                <br />
+                <li><b><u>Sketch the Scene</u></b> - A sketch of the scene is created in such a way that investigators could recreate the crime scene at an alternate location. The sketch includes objects in the room and the location of evidence, as well as directional north, the <b><u>date</u></b>, <b><u>time</u></b>, <b><u>location</u></b>, and <b><u>case number</u></b>.</li>
+                <br />
+                <li><b><u>Search for Additional Evidence</u></b> - A thorough and brief search is conducted to identify any evidence that may have been overlooked in the previous steps. This search can occur in several patterns. One is chosen by the lead investigator.</li>
+                <br />
+                <li><b><u>Secure and Collect Overall Data</u></b> - All identified evidence must be collected and secured using specific techniques and procedures. These techniques keep the evidence from becoming damaged or contaminated. Each piece of evidence is logged onto an <b><u>evidence log</u></b> and marked with an evidence label. The label features a <b><u>chain of custody</u></b>. Each person that touches the evidence must complete the chain of custody. This is required for the items to be admissible, or acceptable as evidence, in a court of law.</li>
+                <br />
+              </ol>
+            </div>
+            <!--- End of UNDER INVESTIGATION --->
+          </div>
+
+        <br />
+
+      </main>
+      <!--- End Main --->
+    </div>
+
+    <!--- Scripts --->
+    <!--- ApexCharts --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+
+    <!--- Custom JS --->
+    <script src="adminScript.js"></script>
+  </body>
+</html>
