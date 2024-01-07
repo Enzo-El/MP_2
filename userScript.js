@@ -52,7 +52,6 @@ function updateIndexTable() {
       <td>${userData.blotter}</td>
       <td>${userData.narrative}</td>
       <td>${userData.incidentDate}</td>
-      <td>${userData.incidentPicture}</td>
       <td>${userData.status}</td>
     `;
     indexTableBody.appendChild(row);
@@ -69,7 +68,6 @@ function updateIndexTable() {
         <td>${userData.blotter}</td>
         <td>${userData.narrative}</td>
         <td>${userData.incidentDate}</td>
-        <td>${userData.incidentPicture}</td>
         <td>${userData.status}</td>
       `;
       indexTableBody.appendChild(row);      
