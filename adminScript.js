@@ -44,7 +44,6 @@ function updateAdminTable() {
       <td>${userData.blotter}</td>
       <td>${userData.narrative}</td>
       <td>${userData.incidentDate}</td>
-      <td>${userData.incidentPicture}</td>
        <td>
        <select onchange="updateStatus(this.value, '${userData.caseNo}')">
       <option value="Pending" ${userData.status === 'Pending' ? 'selected' : ''}>Pending</option>
@@ -69,7 +68,6 @@ function updateAdminTable() {
         <td>${userData.blotter}</td>
         <td>${userData.narrative}</td>
         <td>${userData.incidentDate}</td>
-        <td>${userData.incidentPicture}</td>
          <td>
          <select onchange="updateStatus(this.value, '${userData.caseNo}')">
         <option value="Pending" ${userData.status === 'Pending' ? 'selected' : ''}>Pending</option>
